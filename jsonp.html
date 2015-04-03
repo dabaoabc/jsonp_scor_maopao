@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title></title>
+	<script type="text/javascript">
+		//得到航班信息查询后的回调函数
+     	var flightHandler=function(data){
+     		alert("你要查询的航班结果是：票价："+data.price+"元,"+"余票"+data.tickets+"张。");
+     	};
+     	//提供json的url地址
+     	var url="http://www.xiaojunmo.tk/jsonp.js";
+     	//创建script标签，设置其属性
+     	var script=document.createElement("script");
+     	script.setAttribute('src',url)
+    	//将创建好的虽然此script标签放到head标签里面
+    	document.getElementsByTagName("head")[0].appendChild(script);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

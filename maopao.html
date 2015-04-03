@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title></title>
+</head>
+<body>
+    <div id="Outer_div">
+    	<div id="Middle_div">
+    	   <input type="text" id="inner_div" />
+    	</div>
+    </div>
+     <script type="text/javascript">
+        	var a=document.getElementById("Outer_div");
+        	var b=document.getElementById("Middle_div");
+        	var c=document.getElementById("inner_div");
+        	c.addEventListener("focus",function(){
+        		alert("冒泡事件1");	
+        	},true);
+        	a.addEventListener("focus",function(){
+        		alert("冒泡事件3");
+        	},true)
+        	b.addEventListener("focus",function(){
+        	    alert("冒泡事件2");
+        	},true);
+        	  
+     </script>
+</body>
+</html>
+/*************Submit实现冒泡***************/
+ 
+<!-- <!doctype html>
+<html dir="ltr" lang="zh-CN" onsubmit="alert('能冒泡到html元素')">
+  <head id="head">
+    <meta charset="utf-8"/>
+    <title>事件冒泡 by司徒正美</title>
+
+  </head>
+  <body onsubmit="alert('能冒泡到body元素')">
+    <div onsubmit="alert('能冒泡到form元素的父元素')">
+      <form onsubmit="alert('能冒泡到form元素')">
+        <button type="submit">提交</button>
+        <input type="submit" value="提交">
+      </form>
+    </div>
+  </body>
+</html> -->
